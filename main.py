@@ -2,12 +2,12 @@ import requests
 from twilio.rest import Client
 
 
-account_sid = 'ACa57db76fb22ce2ce9b2a7f83ab116835'
-auth_token = 'aaba77a520af82d8dd07682a5338f4d8'
+account_sid = ''
+auth_token = ''
 parameters = {
     "lat": -1.2746752,
     "lon": 36.847616,
-    "appid": "69f04e4613056b159c2761a9d9e664d2",
+    "appid": "",
     "exclude": "current,minutely,daily"
 
 }
@@ -24,9 +24,9 @@ if will_rain:
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
-        from_='+16204078779',
+        from_='',
         body='Its going to be a rainy day. Remember to carry an umbrella.',
-        to='+254790758813'
+        to=''
     )
 
     print(message.status)
